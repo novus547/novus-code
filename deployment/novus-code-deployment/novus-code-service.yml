@@ -1,0 +1,12 @@
+# novus-code-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: novus-code-service
+spec:
+  selector:
+    app: novus-code
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 3001
